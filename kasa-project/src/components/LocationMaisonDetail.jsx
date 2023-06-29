@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { datas } from "../DB/data";
+import { datas } from "../../public/data/data";
 import { StarRating } from "./StarRating";
 
 export const LocationMaisonDetail = () => {

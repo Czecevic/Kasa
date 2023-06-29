@@ -1,4 +1,4 @@
-import { datas } from "../DB/data";
+import { datas } from "../../public/data/data";
 import { Link } from "react-router-dom";
 export const LocationMaison = () => {
   return (

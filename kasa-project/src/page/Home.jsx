@@ -1,6 +1,6 @@
-import "./App.css";
-import img from "./assets/home_cover.png";
-import { LocationMaison } from "./components/LocationMaison";
+import "../App.css";
+import img from "../assets/home_cover.png";
+import { LocationMaison } from "../components/LocationMaison";
 
 export const HomePage = () => {
   return (
