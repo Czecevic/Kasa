@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  list-style: none;
   /* font-family: "Raleway", sans-serif; */
 }
 
@@ -37,10 +40,23 @@ body {
   gap: 1rem;
 }
 
-.homepage_picture {
+.imgHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.imgHome h1 {
+  position: absolute;
+  align-self: center;
+  color: #fff;
+  font-size: 48px;
+}
+
+.imgHome img {
+  border-radius: 25px;
   width: 100%;
-  height: 10rem;
-  border-radius: 15px;
 }
 
 .nav a {
@@ -54,10 +70,7 @@ body {
 }
 
 .nav li:hover {
-  background-color: #ff6060;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px;
+  border-bottom: 2px solid #ff6060;
 }
 
 /* Card  */
@@ -66,19 +79,23 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .card {
-  width: 300px;
+  width: 340px;
+  height: 340px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ff6060;
 }
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 80%;
+  object-fit: cover;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -86,9 +103,271 @@ body {
 .card h2 {
   font-size: 18px;
   margin-bottom: 5px;
+  color: #fff;
 }
 
-.card p {
+/* About */
+
+.allElementAbout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.imgAbout {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.imgAbout img {
+  border-radius: 25px;
+  width: 100%;
+}
+
+.oneElementAbout {
+  margin: 1rem;
+  align-items: center;
+  width: 80%;
+  display: flex;
+  height: 8rem;
+  flex-direction: column;
+}
+
+.oneElementAbout button {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+  padding: 10px;
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1;
+}
+
+.oneElementAbout p {
+  position: relative;
+  text-align: -webkit-center;
+  padding: 20px 10px 10px 0px;
+  font-size: 24px;
+  bottom: 10px;
+  border-radius: 10px;
+  color: #ff6060;
+  background-color: #eae9e9;
+}
+
+/* Error Page */
+
+.Error404-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 288px;
+}
+
+.ErrorPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #ff6060;
+}
+
+.ErrorPage a {
+  color: #ff6060;
+}
+
+.Error_link {
+  display: flex;
+  align-items: center;
+  gap: 233px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* HomeDescription */
+
+.allElementResa {
+  margin: 0 5rem 0 5rem;
+  color: #ff6060;
+}
+
+.imgResa {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.imgResa img {
+  border-radius: 25px;
+  width: 90%;
+  object-fit: cover;
+  height: 415px;
+}
+
+.profilAndTitre {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tag {
+  display: flex;
+  gap: 10px;
+  color: #fff;
   font-size: 14px;
-  color: #888;
+}
+
+.tag li {
+  padding: 0 25px 0 25px;
+  border-radius: 25px;
+  background-color: #ff6060;
+}
+
+.user {
+  align-self: center;
+  text-align: -webkit-center;
+}
+
+.userDetail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: space-around;
+}
+
+.userDetail h3 {
+  font-size: 18px;
+}
+
+.userDetail img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+}
+
+.DescriptionAndEquipement {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Description,
+.Equipement {
+  width: 40%;
+  padding: 0 20px 0 20px;
+}
+
+.Description h4,
+.Equipement h4 {
+  background-color: #ff6060;
+  color: #fff;
+}
+
+.Description button,
+.Equipement button {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  padding: 10px;
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1;
+}
+
+.Description p, .Equipement ul {
+  text-align: -webkit-center;
+  position: relative;
+  padding: 20px 10px 10px 10px;
+  font-size: 18px;
+  bottom: 10px;
+  z-index: -1;
+  border-radius: 10px;
+  color: #ff6060;
+  background-color: #eae9e9;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+@media screen and (max-width: 400px) {
+
+  /* homePage */
+  .imgHome h1 {
+    font-size: 16px;
+  }
+
+  .site-title img {
+    height: 24px;
+  }
+
+  .nav a {
+    gap: 1rem;
+    padding: 0;
+  }
+
+  /* HomeDetail */
+
+  .allElementResa {
+    margin: 0 1rem 0 1rem;
+  }
+
+  .imgResa {
+    margin: 0;
+  }
+
+  .imgResa img {
+    height: 255px;
+    width: 100%;
+  }
+
+  .profilAndTitre {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tag {
+    flex-wrap: wrap;
+  }
+
+  .tag li {
+    border-radius: 10px;
+  }
+
+  .DescriptionAndEquipement {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .Description, .Equipement {
+    width: 100%;
+  }
+
+  .user {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 40px;
+  }
+
+  .userDetail img { 
+    width: 32px;
+    height: 32px;
+  }
+
 }
