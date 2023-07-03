@@ -57,6 +57,7 @@ body {
 .imgHome img {
   border-radius: 25px;
   width: 100%;
+  height: 68px;
 }
 
 .nav a {
@@ -122,6 +123,8 @@ body {
 .imgAbout img {
   border-radius: 25px;
   width: 100%;
+  height: 223px;
+  object-fit: cover;
 }
 
 .oneElementAbout {
@@ -129,7 +132,7 @@ body {
   align-items: center;
   width: 80%;
   display: flex;
-  height: 8rem;
+  height: auto;
   flex-direction: column;
 }
 
@@ -152,7 +155,7 @@ body {
 .oneElementAbout p {
   position: relative;
   text-align: -webkit-center;
-  padding: 20px 10px 10px 0px;
+  padding: 20px 10px 10px 10px;
   font-size: 24px;
   bottom: 10px;
   border-radius: 10px;
@@ -286,7 +289,8 @@ body {
   z-index: 1;
 }
 
-.Description p, .Equipement ul {
+.Description p,
+.Equipement ul {
   text-align: -webkit-center;
   position: relative;
   padding: 20px 10px 10px 10px;
@@ -305,8 +309,19 @@ body {
   gap: 20px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
+  .imgHome h1 {
+    font-size: 28px;
+  }
+}
 
+@media screen and (max-width: 780px) {
+  .imgHome h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
   /* homePage */
   .imgHome h1 {
     font-size: 16px;
@@ -354,7 +369,8 @@ body {
     gap: 20px;
   }
 
-  .Description, .Equipement {
+  .Description,
+  .Equipement {
     width: 100%;
   }
 
@@ -365,9 +381,21 @@ body {
     gap: 40px;
   }
 
-  .userDetail img { 
+  .userDetail img {
     width: 32px;
     height: 32px;
   }
+  .user {
+    flex-direction: column;
+  }
+  .nav {
+    flex-direction: column;
+  }
+}
 
+@media screen and (max-width: 280px) {
+  /* homePage */
+  .imgHome h1 {
+    font-size: 10px;
+  }
 }
