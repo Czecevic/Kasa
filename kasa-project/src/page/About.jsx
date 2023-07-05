@@ -1,7 +1,5 @@
 import { useState } from "react";
 import img from "../assets/about_cover.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export const About = () => {
   const [Fiabilité, setFiabilité] = useState(false);
@@ -32,9 +30,9 @@ export const About = () => {
           <button onClick={FirstElement}>
             Fiabilité
             {Fiabilité ? (
-              <FontAwesomeIcon icon={faArrowDown} />
+              <span className="arrow-size">&darr;</span>
             ) : (
-              <FontAwesomeIcon icon={faArrowUp} />
+              <span className="arrow-size">&uarr;</span>
             )}
           </button>
           {Fiabilité && (
@@ -49,9 +47,9 @@ export const About = () => {
           <button onClick={SecondElement}>
             Respect
             {Respect ? (
-              <FontAwesomeIcon icon={faArrowDown} />
+              <span className="arrow-size">&darr;</span>
             ) : (
-              <FontAwesomeIcon icon={faArrowUp} />
+              <span className="arrow-size">&uarr;</span>
             )}
           </button>
           {Respect && (
@@ -66,16 +64,16 @@ export const About = () => {
           <button onClick={ThridElement}>
             Service
             {Service ? (
-              <FontAwesomeIcon icon={faArrowDown} />
+              <span className="arrow-size">&darr;</span>
             ) : (
-              <FontAwesomeIcon icon={faArrowUp} />
+              <span className="arrow-size">&uarr;</span>
             )}
           </button>
           {Service && (
             <p>
               Nos équipes se tiennent à votre disposition pour vous fournir une
-              expérience parfaite. N'hésitez pas à nous contacter si vous avez
-              la moindre question.
+              expérience parfaite. N&#39;hésitez pas à nous contacter si vous
+              avez la moindre question.
             </p>
           )}
         </div>
@@ -83,9 +81,9 @@ export const About = () => {
           <button onClick={FourthElement}>
             Sécurité
             {Sécurité ? (
-              <FontAwesomeIcon icon={faArrowDown} />
+              <span className="arrow-size">&darr;</span>
             ) : (
-              <FontAwesomeIcon icon={faArrowUp} />
+              <span className="arrow-size">&uarr;</span>
             )}
           </button>
           {Sécurité && (
@@ -93,9 +91,9 @@ export const About = () => {
               La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
               pour les voyageurs, chaque logement correspond aux critères de
               sécurité établis par nos services. En laissant une note aussi bien
-              à l'hôte qu'au locataire, cela permet à nos équipes de vérifier
-              que les standards sont bien respectés. Nous organisons également
-              des ateliers sur la sécurité domestique pour nos hôtes.
+              à l&#39;hôte qu&#39;au locataire, cela permet à nos équipes de
+              vérifier que les standards sont bien respectés. Nous organisons
+              également des ateliers sur la sécurité domestique pour nos hôtes.
             </p>
           )}
         </div>

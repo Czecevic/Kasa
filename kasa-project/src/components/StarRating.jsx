@@ -5,12 +5,16 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 export const StarRating = ({ rating }) => {
   const stars = [];
   const fullStars = Math.floor(rating);
-  
+
   for (let i = 0; i < 5; i++) {
     if (i < fullStars) {
-      stars.push(<FontAwesomeIcon icon={faStar} />);
+      stars.push(<span className="arrow-size">&#10029;</span>);
     } else {
-      stars.push(<FontAwesomeIcon style={{ color: '#E3E3E3' }} icon={faStar} />);
+      stars.push(
+        <span style={{ color: "#E3E3E3" }} className="arrow-size">
+          &#10029;
+        </span>
+      );
     }
   }
 

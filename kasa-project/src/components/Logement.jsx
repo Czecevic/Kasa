@@ -3,10 +3,9 @@ import { callData } from "../callData";
 import { Error } from "../page/Error";
 import { StarRating } from "./StarRating";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { Carousel } from "./Carousel";
 
-export const HouseDetails = () => {
+export const Logement = () => {
   const [desc, setDesc] = useState(false);
   const [equip, setEquip] = useState(false);
   const data = callData();
@@ -28,7 +27,7 @@ export const HouseDetails = () => {
   return (
     <div className="allElementResa">
       <div className="imgResa">
-        <img src={dataLocation.pictures[1]} />
+        <Carousel images={dataLocation.pictures} />
       </div>
       <div className="profilAndTitre">
         <div className="title">
@@ -52,9 +51,9 @@ export const HouseDetails = () => {
           <button onClick={descButton}>
             Description
             {desc ? (
-              <FontAwesomeIcon icon={faArrowDown} />
+              <span className="arrow-size">&darr;</span>
             ) : (
-              <FontAwesomeIcon icon={faArrowUp} />
+              <span className="arrow-size">&uarr;</span>
             )}
           </button>
           {desc ? <p>{dataLocation.description}</p> : !desc}
@@ -63,9 +62,9 @@ export const HouseDetails = () => {
           <button onClick={equipButton}>
             Equipement
             {equip ? (
-              <FontAwesomeIcon icon={faArrowDown} />
+              <span className="arrow-size">&darr;</span>
             ) : (
-              <FontAwesomeIcon icon={faArrowUp} />
+              <span className="arrow-size">&uarr;</span>
             )}
           </button>
           {equip ? (

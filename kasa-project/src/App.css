@@ -15,6 +15,10 @@ body {
   margin: 0 auto;
 }
 
+.active {
+  border-bottom: 2px solid #ff6060;
+}
+
 /* NavBar CSS */
 
 .nav {
@@ -44,7 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem;
+  margin-bottom: 2rem;
 }
 
 .imgHome h1 {
@@ -71,8 +75,23 @@ body {
   padding: 0 1rem;
 }
 
-.nav li:hover {
-  border-bottom: 2px solid #ff6060;
+.nav li {
+  position: relative;
+}
+
+.nav li::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6060;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav li:hover::before {
+  width: 100%;
 }
 
 /* Card  */
@@ -92,6 +111,12 @@ body {
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #ff6060;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card img {
@@ -193,14 +218,13 @@ body {
 /* HomeDescription */
 
 .allElementResa {
-  margin: 0 5rem 0 5rem;
   color: #ff6060;
 }
 
 .imgResa {
   display: flex;
   justify-content: center;
-  margin: 2rem;
+  margin-bottom: 1rem;
 }
 
 .imgResa img {
@@ -264,7 +288,6 @@ body {
 .Description,
 .Equipement {
   width: 40%;
-  padding: 0 20px 0 20px;
 }
 
 .Description h4,
@@ -310,15 +333,87 @@ body {
   gap: 20px;
 }
 
+/* Carousel */
+
+.carousel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative; /* Add relative position */
+}
+
+.left,
+.right {
+  position: absolute;
+  font-size: 96px;
+  color: #fff;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.arrow-size {
+  font-size: 35px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer img {
+  filter: invert(99%) sepia(94%) saturate(3%) hue-rotate(230deg)
+    brightness(200%) contrast(100%);
+  width: 122px;
+  margin-bottom: 2rem;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 24px;
+}
+
 @media screen and (max-width: 800px) {
   .imgHome h1 {
     font-size: 28px;
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
   .imgHome h1 {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profilAndTitre {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .left {
+    left: 15%;
+  }
+
+  .right {
+    right: 15%;
   }
 }
 
@@ -343,22 +438,12 @@ body {
 
   /* HomeDetail */
 
-  .allElementResa {
-    margin: 0 1rem 0 1rem;
-  }
-
   .imgResa {
     margin: 0;
   }
 
   .imgResa img {
     height: 255px;
-    width: 100%;
-  }
-
-  .profilAndTitre {
-    flex-direction: column;
-    gap: 20px;
   }
 
   .tag {
@@ -382,7 +467,7 @@ body {
   .user {
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-end;
+    align-items: center;
     gap: 40px;
   }
 
@@ -402,5 +487,12 @@ body {
   /* homePage */
   .imgHome h1 {
     font-size: 10px;
+  }
+  .left,
+  .right {
+    font-size: 50px;
+  }
+  .footer img {
+    width: 60px;
   }
 }
