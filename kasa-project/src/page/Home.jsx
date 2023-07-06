@@ -6,11 +6,10 @@ export const HomePage = () => {
   return (
     <>
       <div className="imgHome">
-        <img src={img}>
-        </img>
+        <img src={img} />
         <h1>Chez vous, partout et ailleurs</h1>
       </div>
-      <HomeCards></HomeCards>
+      <HomeCards />
     </>
   );
 };

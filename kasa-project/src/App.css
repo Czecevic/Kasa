@@ -100,17 +100,17 @@ body {
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
   justify-content: center;
+  background-color: #eae9e9;
+  padding: 4rem;
+  border-radius: 10px;
 }
 
 .card {
-  width: 340px;
-  height: 340px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #ff6060;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -122,16 +122,24 @@ body {
 
 .card img {
   width: 100%;
-  height: 80%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .card h2 {
+  position: relative;
+  bottom: 50px;
+  left: 15px;
   font-size: 18px;
-  margin-bottom: 5px;
   color: #fff;
+}
+
+.arrowImgOfElement {
+  width: 30px;
+  height: 30px;
+  filter: invert(99%) sepia(94%) saturate(3%) hue-rotate(230deg)
+    brightness(200%) contrast(100%);
 }
 
 /* About */
@@ -181,7 +189,7 @@ body {
 
 .oneElementAbout p {
   position: relative;
-  text-align: -webkit-center;
+  text-align: -webkit-left;
   padding: 20px 10px 10px 10px;
   font-size: 24px;
   bottom: 10px;
@@ -220,6 +228,7 @@ body {
 
 .allElementResa {
   color: #ff6060;
+  margin: 0 1rem 0 1rem;
 }
 
 .imgResa {
@@ -230,7 +239,6 @@ body {
 
 .imgResa img {
   border-radius: 25px;
-  width: 90%;
   object-fit: cover;
   height: 415px;
 }
@@ -351,29 +359,54 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative; /* Add relative position */
+  position: relative;
 }
 
 .left,
 .right {
   position: absolute;
-  font-size: 96px;
   color: #fff;
+  font-size: 10px;
   border: none;
   background: none;
   cursor: pointer;
+  align-items: center;
 }
 
 .left {
   left: 10px;
+  z-index: 1;
 }
 
 .right {
   right: 10px;
 }
 
+.arrow-img {
+  width: 50px !important;
+  height: 50px !important;
+  filter: invert(99%) sepia(94%) saturate(3%) hue-rotate(230deg)
+    brightness(200%) contrast(100%);
+}
+
+.carousel-content {
+  flex: 1;
+  position: relative;
+}
+
 .carousel img {
   width: 100%;
+}
+
+.carousel-number {
+  position: absolute;
+  left: 45%;
+  right: 45%;
+  bottom: 5%;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  font-size: 30px;
 }
 
 .arrow-size {
@@ -420,13 +453,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-  }
-  .left {
-    left: 15%;
-  }
-
-  .right {
-    right: 15%;
   }
 }
 
