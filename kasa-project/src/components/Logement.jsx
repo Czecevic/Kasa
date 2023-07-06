@@ -19,7 +19,7 @@ export const Logement = () => {
     setEquip(!equip);
   };
   // console.log(data);
-  const dataLocation = data.find((data) => data.id === id);
+  const dataLocation = data.find((item) => item.id === id);
   if (!dataLocation) {
     return <Error />;
   }
@@ -41,7 +41,7 @@ export const Logement = () => {
         <div className="user">
           <div className="userDetail">
             <h3>{dataLocation.host.name}</h3>
-            <img src={dataLocation.host.picture} />
+            <img src={dataLocation.host.picture} alt="Host" />
           </div>
           <StarRating rating={dataLocation.rating} />
         </div>
@@ -50,22 +50,30 @@ export const Logement = () => {
         <div className="Description">
           <button onClick={descButton}>
             Description
-            {desc ? (
-              <span className="arrow-size">&darr;</span>
-            ) : (
-              <span className="arrow-size">&uarr;</span>
-            )}
+            <span
+              className={`arrow-size ${desc ? "rotate-icon" : ""}`}
+              role="img"
+              aria-label="Arrow"
+            >
+              ↑
+            </span>
           </button>
-          {desc ? <p>{dataLocation.description}</p> : !desc}
+          {desc ? (
+            <p className={`description-paragraph ${desc ? "show" : "hide"}`}>
+              {dataLocation.description}
+            </p>
+          ) : null}
         </div>
         <div className="Equipement">
           <button onClick={equipButton}>
             Equipement
-            {equip ? (
-              <span className="arrow-size">&darr;</span>
-            ) : (
-              <span className="arrow-size">&uarr;</span>
-            )}
+            <span
+              className={`arrow-size ${equip ? "rotate-icon" : ""}`}
+              role="img"
+              aria-label="Arrow"
+            >
+              ↑
+            </span>
           </button>
           {equip ? (
             <ul>
@@ -73,9 +81,7 @@ export const Logement = () => {
                 <li key={index}>{equipementName}</li>
               ))}
             </ul>
-          ) : (
-            !desc
-          )}
+          ) : null}
         </div>
       </div>
     </div>

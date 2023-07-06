@@ -48,7 +48,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .imgHome h1 {
@@ -109,8 +110,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #ff6060;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -251,6 +252,13 @@ body {
   padding: 0 25px 0 25px;
   border-radius: 25px;
   background-color: #ff6060;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.tag li:hover {
+  transform: scale(1.05);
 }
 
 .user {
@@ -326,6 +334,10 @@ body {
   background-color: #eae9e9;
 }
 
+.rotate-icon {
+  transform: rotate(180deg);
+}
+
 .title {
   display: flex;
   flex-direction: column;
@@ -366,6 +378,7 @@ body {
 
 .arrow-size {
   font-size: 35px;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Footer */
