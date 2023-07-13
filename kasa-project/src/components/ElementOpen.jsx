@@ -12,7 +12,7 @@ export const ElementOpen = ({ className, title, content }) => {
     <div className={className}>
       <button onClick={handleClick}>
         {title}
-        <span className={`arrowImgOfElement ${isOpen ? "rotate-icon" : ""}`}>
+        <span className={`arrowImgOfElement ${isOpen ? "" : "rotate-icon"}`}>
           <img src={img} alt="arrow-up" />
         </span>
       </button>

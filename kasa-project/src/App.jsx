@@ -1,9 +1,14 @@
 import { HomePage } from "./page/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { Navbar } from "./components/NavBar.jsx";
-import { About } from "./page/About";
-import { Logement } from "./page/Logement";
-import { Error } from "./page/Error";
+import { About } from "./page/About.jsx";
+import { Logement } from "./page/Logement.jsx";
+import { Error } from "./page/Error.jsx";
 
 export const App = () => {
   return (
