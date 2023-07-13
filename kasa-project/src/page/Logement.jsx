@@ -4,7 +4,6 @@ import { Error } from "./Error";
 import { StarRating } from "../components/StarRating";
 import { Carousel } from "../components/Carousel";
 import { ElementOpen } from "../components/ElementOpen";
-
 export const Logement = () => {
   const data = callData();
   const { id } = useParams();

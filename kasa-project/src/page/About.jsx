@@ -1,6 +1,5 @@
 import { ElementOpen } from "../components/ElementOpen";
 import img from "../assets/about_cover.png";
-
 export const About = () => {
   return (
     <>

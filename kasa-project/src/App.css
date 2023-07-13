@@ -341,7 +341,7 @@ body {
 
 .Description p,
 .Equipement ul {
-  text-align: -webkit-center;
+  text-align: -webkit-left;
   position: relative;
   padding: 20px 10px 10px 10px;
   font-size: 18px;

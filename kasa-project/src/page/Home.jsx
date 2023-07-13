@@ -1,7 +1,6 @@
 import "../App.css";
 import img from "../assets/home_cover.png";
 import { HomeCards } from "../components/HomeCards";
-
 export const HomePage = () => {
   return (
     <>

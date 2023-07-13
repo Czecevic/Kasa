@@ -16,7 +16,7 @@ export const ElementOpen = ({ className, title, content }) => {
           <img src={img} alt="arrow-up" />
         </span>
       </button>
-      {isOpen && <p>{content}</p>}
+      {isOpen && <div>{content}</div>}
     </div>
   );
 };
