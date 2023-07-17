@@ -21,7 +21,6 @@
 
 body {
   max-width: 1440px;
-  padding-top: 40px;
   margin: 0 auto;
 }
 
@@ -38,7 +37,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 0 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .site-title {
@@ -67,6 +66,7 @@ body {
   align-self: center;
   color: #fff;
   font-size: 48px;
+  padding: 1rem;
 }
 
 .imgHome img {
@@ -74,6 +74,7 @@ body {
   width: 100%;
   height: 223px;
   object-fit: cover;
+  filter: brightness(70%);
 }
 
 .nav a {
@@ -162,7 +163,7 @@ body {
 .imgAbout {
   display: flex;
   justify-content: center;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .imgAbout img {
@@ -175,10 +176,11 @@ body {
 .oneElementAbout {
   margin: 1rem;
   align-items: center;
-  width: 80%;
+  width: 100%;
   display: flex;
   height: auto;
   flex-direction: column;
+  padding: 0 1rem;
 }
 
 .oneElementAbout button {
@@ -190,7 +192,7 @@ body {
   padding: 10px;
   align-items: center;
   background-color: #ff6060;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
   color: #fff;
@@ -328,7 +330,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 52px;
+  height: 30px;
   padding: 10px;
   align-items: center;
   background-color: #ff6060;
@@ -337,14 +339,15 @@ body {
   cursor: pointer;
   color: #fff;
   z-index: 1;
+  font-size: 13px;
 }
 
-.Description p,
+.Description div,
 .Equipement ul {
   text-align: -webkit-left;
   position: relative;
   padding: 20px 10px 10px 10px;
-  font-size: 18px;
+  font-size: 13px;
   bottom: 10px;
   z-index: -1;
   border-radius: 10px;
@@ -420,8 +423,8 @@ body {
 }
 
 .arrow-size {
-  font-size: 35px;
-  transition: transform 0.3s ease-in-out;
+  font-size: 24px;
+  padding: 3px;
 }
 
 /* Footer */
@@ -461,7 +464,7 @@ body {
 @media screen and (max-width: 600px) {
   .profilAndTitre {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
   }
 }
@@ -469,7 +472,7 @@ body {
 @media screen and (max-width: 500px) {
   /* homePage */
   .imgHome h1 {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .imgHome img {
@@ -477,12 +480,18 @@ body {
   }
 
   .site-title img {
-    height: 24px;
+    height: 47px;
   }
 
   .nav a {
     gap: 1rem;
     padding: 0;
+    font-size: 12px;
+  }
+
+  .container {
+    background: none;
+    padding: 1rem;
   }
 
   /* HomeDetail */
@@ -513,22 +522,43 @@ body {
     width: 100%;
   }
 
+  .oneElementAbout button {
+    font-size: 13px;
+    height: 30px;
+  }
+
   .user {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 40px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .carousel-number {
+    display: none;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .arrow-size {
+    font-size: 13px;
+    padding: 3px;
   }
 
   .userDetail img {
     width: 32px;
     height: 32px;
   }
-  .user {
-    flex-direction: column;
+  .arrowImgOfElement {
+    width: 16px;
+    height: 16px;
   }
-  .nav {
-    flex-direction: column;
+  .arrow-img {
+    width: 25px !important;
+    height: 25px !important;
   }
 }
 
