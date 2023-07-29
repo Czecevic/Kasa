@@ -473,6 +473,9 @@ body {
   .imgHome h1 {
     font-size: 24px;
   }
+  .Error404-title {
+    font-size: 100px;
+  }
 }
 
 @media screen and (max-width: 600px) {
