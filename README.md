@@ -10,7 +10,8 @@ Démarrer le projet React et développer l’ensemble de l’application, les co
 
 ##### Cahier des charges
 
-● Create React App
+● typeScript
+● React
 ● React Router
 ● Styling: L’utilisation de Sass est optionnelle. CSS est à utiliser par défaut.
 ● Pas de librairie React externe
